@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JC Heritage Builders | Master East Anglian Craftsmen | Norfolk, Suffolk & Cambridgeshire</title>
+  <meta name="description" content="JC Heritage Builders. Specialist restoration, traditional knapped flintwork, brickwork, master carpentry, roofing, drainage, kitchen fitting and luxury bathrooms across Norfolk, Suffolk, and Cambridgeshire.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            estate: {
+              deep: '#0d1f18',      /* British Heritage Hunter Green */
+              forest: '#153227',    /* Rich Dark Spruce */
+              slate: '#1e2926',     /* Dark Masonry Slate */
+              gold: '#c99a3e',      /* Antique Gold Accent */
+              goldLight: '#e3be6d', /* Pale Heraldic Gold */
+              goldHover: '#b2842e',
+              stone: '#f7f5f0',     /* Norfolk Limestone / Parchment */
+              sand: '#ece7dc',      /* Warm Mortar Sand */
+              muted: '#707f78'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Gold crest glow animation */
+    @keyframes royalGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201, 154, 62, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(201, 154, 62, 0); }
+    }
+    .royal-pulse {
+      animation: royalGlow 2.5s infinite;
+    }
+    .slider-handle {
+      touch-action: none;
+    }
+  </style>
+</head>
+
+<body class="bg-estate-stone text-slate-800 font-sans antialiased selection:bg-estate-gold selection:text-white">
+
+  <header class="bg-estate-deep text-slate-200 text-xs py-2.5 px-4 border-b border-estate-gold/25 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-estate-gold animate-ping"></span>
+        <span class="text-slate-300 font-medium tracking-wide">
+          JC Heritage Builders • Specialists in Period & Architectural Restorations across Norfolk, Suffolk & Cambridgeshire
+        </span>
+      </div>
+      <div class="flex items-center gap-5 text-xs">
+        <span class="hidden md:inline text-estate-sand/80">Norfolk • Suffolk • Cambridgeshire</span>
+        <a href="tel:07767234921" class="font-bold text-estate-gold hover:text-white transition flex items-center gap-1.5 tracking-wider">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          Direct Line: 07767 234 921
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-estate-sand shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+      
+      <!-- Brand Logo featuring Prince of Wales Fleur-de-lis Badge (Enlarged & Stately) -->
+      <a href="#" class="flex items-center gap-4 group">
+        <div class="w-20 h-20 sm:w-22 sm:h-22 bg-estate-forest rounded-2xl flex items-center justify-center p-2 shadow-lg border-2 border-estate-gold/40 group-hover:border-estate-gold transition-all duration-300 transform group-hover:scale-105 shrink-0">
+          <!-- Scalable Vector Prince of Wales Feathers & Fleur-de-lis Crest -->
+          <svg class="w-full h-full text-estate-gold drop-shadow-md" viewBox="0 0 100 100" fill="currentColor">
+            <!-- Coronet Base -->
+            <path d="M28 73 L72 73 L68 64 L32 64 Z" fill="#c99a3e"/>
+            <ellipse cx="50" cy="74" rx="20" ry="2.5" fill="#e3be6d"/>
+            <circle cx="34" cy="68" r="2" fill="#ffffff"/>
+            <circle cx="50" cy="68" r="2.5" fill="#ffffff"/>
+            <circle cx="66" cy="68" r="2" fill="#ffffff"/>
+            
+            <!-- Central Feather / Fleur-de-lis Plume -->
+            <path d="M50 14 C48 30 43 45 42 62 C46 63 54 63 58 62 C57 45 52 30 50 14 Z" fill="#e3be6d"/>
+            <path d="M50 14 C51 26 53 38 52 62 C51 62 50 62 50 14 Z" fill="#c99a3e"/>
+            <circle cx="50" cy="14" r="3.2" fill="#c99a3e"/>
+
+            <!-- Left Plume Curving Gracefully -->
+            <path d="M42 61 C40 45 32 30 20 28 C22 36 29 44 33 49 C30 42 27 36 22 32 C26 44 32 54 40 62 Z" fill="#c99a3e"/>
+            <path d="M20 28 C18 29 17 31 18 33 C23 37 31 46 36 58 C38 59 40 60 41 61 C37 49 28 36 20 28 Z" fill="#e3be6d"/>
+
+            <!-- Right Plume Curving Gracefully -->
+            <path d="M58 61 C60 45 68 30 80 28 C78 36 71 44 67 49 C70 42 73 36 78 32 C74 44 68 54 60 62 Z" fill="#c99a3e"/>
+            <path d="M80 28 C82 29 83 31 82 33 C77 37 69 46 64 58 C62 59 60 60 59 61 C63 49 72 36 80 28 Z" fill="#e3be6d"/>
+
+            <!-- Heritage Ribbon Scroll at Base -->
+            <path d="M22 79 C35 77 65 77 78 79 C82 82 80 86 74 86 C64 84 36 84 26 86 C20 86 18 82 22 79 Z" fill="#b2842e"/>
+            <text x="50" y="84" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="5" fill="#f7f5f0" text-anchor="middle" letter-spacing="0.5">ICH DIEN</text>
+          </svg>
+        </div>
+        <div>
+          <div class="font-serif font-bold text-2xl sm:text-3xl md:text-3xl tracking-wider text-estate-deep uppercase leading-none">
+            JC HERITAGE
+          </div>
+          <div class="text-[11px] sm:text-xs tracking-[0.28em] text-estate-gold font-extrabold uppercase mt-1">
+            BUILDERS EAST ANGLIA
+          </div>
+          <div class="text-[10px] text-slate-500 font-medium tracking-tight mt-0.5">
+            Norfolk • Suffolk • Cambridgeshire
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-700">
+        <a href="#services" class="hover:text-estate-gold transition-colors">Specialist Services</a>
+        <a href="#heritage-craft" class="hover:text-estate-gold transition-colors">Brick & Flintwork</a>
+        <a href="#projects" class="hover:text-estate-gold transition-colors">Before & After</a>
+        <a href="#reviews" class="hover:text-estate-gold transition-colors">Testimonials</a>
+        <a href="#quote-engine" class="hover:text-estate-gold transition-colors">Free Estimate</a>
+        <a href="#faq" class="hover:text-estate-gold transition-colors">FAQ</a>
+      </div>
+
+      <!-- Action Button Group -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:07767234921" class="text-estate-forest hover:text-estate-gold font-semibold text-sm px-3 py-2 flex items-center gap-1.5 transition">
+          <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          07767 234 921
+        </a>
+        <a href="#quote-engine" class="royal-pulse bg-estate-forest hover:bg-estate-deep text-estate-stone border border-estate-gold/40 px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition flex items-center gap-2">
+          <span class="text-estate-goldLight">Request Free Quote</span>
+          <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="toggleMobileNav()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-estate-sand bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="#quote-engine" onclick="toggleMobileNav()" class="block text-estate-gold font-bold py-2">⚡ Request Your Free Quote</a>
+      <a href="#services" onclick="toggleMobileNav()" class="block text-slate-700 hover:text-estate-gold py-2 font-medium">All Services (Brick, Flint, Wood, Roofing, Drainage)</a>
+      <a href="#heritage-craft" onclick="toggleMobileNav()" class="block text-slate-700 hover:text-estate-gold py-2 font-medium">Traditional East Anglian Masonry</a>
+      <a href="#projects" onclick="toggleMobileNav()" class="block text-slate-700 hover:text-estate-gold py-2 font-medium">Before & After Showcase</a>
+      <a href="#reviews" onclick="toggleMobileNav()" class="block text-slate-700 hover:text-estate-gold py-2 font-medium">Customer Reviews</a>
+      <a href="tel:07767234921" class="block w-full text-center bg-estate-forest text-estate-gold py-3 rounded-xl font-bold">Direct Call: 07767 234 921</a>
+    </div>
+  </nav>
+
+  <section class="relative bg-estate-deep text-white pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+    <!-- Subtle Architectural Diamond Grid Background -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#c99a3e 1px, transparent 1px); background-size: 28px 28px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Introduction -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2.5 bg-estate-forest/80 backdrop-blur-md px-4 py-2 rounded-full border border-estate-gold/30 text-xs sm:text-sm font-semibold text-estate-goldLight">
+            <!-- Fleur-de-lis mini icon -->
+            <svg class="w-4 h-4 fill-current text-estate-gold" viewBox="0 0 24 24"><path d="M12 2C11 8 9 10 7 11c1.5.5 3 2 3 4 0 2-1 3-3 3 3 1 5 1 5 4 0-3 2-3 5-4-2 0-3-1-3-3 0-2 1.5-3.5 3-4-2-1-4-3-5-9z"/></svg>
+            <span>Norfolk • Suffolk • Cambridgeshire Period Restorations</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.18]">
+            Master Craftsmen in <span class="text-estate-gold italic underline decoration-estate-gold/40 underline-offset-8">Brick, Flint & Timber</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            From traditional knapped flintwork and breathable lime repointing to structural timber framing, roofing, engineered drainage, bespoke kitchens, and luxury bathrooms. Serving homes and estates across Norfolk, Suffolk, and Cambridgeshire.
+          </p>
+
+          <!-- Core Credentials Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/5 border border-estate-gold/20 rounded-xl p-3.5 backdrop-blur-sm">
+              <div class="text-estate-gold font-serif font-bold text-xl">Flint & Lime</div>
+              <div class="text-xs text-slate-300">Authentic period masonry</div>
+            </div>
+            <div class="bg-white/5 border border-estate-gold/20 rounded-xl p-3.5 backdrop-blur-sm">
+              <div class="text-estate-gold font-serif font-bold text-xl">3 Counties</div>
+              <div class="text-xs text-slate-300">Norfolk, Suffolk & Cambs</div>
+            </div>
+            <div class="bg-white/5 border border-estate-gold/20 rounded-xl p-3.5 backdrop-blur-sm col-span-2 sm:col-span-1">
+              <div class="text-estate-gold font-serif font-bold text-xl">100% Free</div>
+              <div class="text-xs text-slate-300">On-site survey & quote</div>
+            </div>
+          </div>
+
+          <!-- Social Proof Rating -->
+          <div class="flex items-center gap-4 pt-3 text-slate-300 text-sm">
+            <div class="flex -space-x-2">
+              <div class="w-9 h-9 rounded-full bg-estate-forest border-2 border-estate-gold flex items-center justify-center text-xs font-bold text-estate-goldLight">NR</div>
+              <div class="w-9 h-9 rounded-full bg-amber-800 border-2 border-estate-gold flex items-center justify-center text-xs font-bold text-white">IP</div>
+              <div class="w-9 h-9 rounded-full bg-slate-700 border-2 border-estate-gold flex items-center justify-center text-xs font-bold text-white">CB</div>
+            </div>
+            <div>
+              <div class="flex text-estate-gold text-xs font-bold">★★★★★</div>
+              <p class="text-xs text-slate-400">Covering Norwich, King's Lynn, Bury St Edmunds, Cambridge & surrounds</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6" id="quote-engine">
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-800 border-2 border-estate-gold/40 relative">
+            
+            <div class="flex justify-between items-center mb-5 pb-3 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-estate-gold">Heritage Quote Estimator</span>
+                <h3 class="font-serif text-2xl font-bold text-estate-deep">Request Your Free Specification</h3>
+              </div>
+              <span class="bg-estate-stone text-estate-forest text-xs font-bold px-3 py-1.5 rounded-full border border-estate-gold/30">
+                Step <span id="current-step-indicator">1</span> of 3
+              </span>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="w-full bg-slate-100 rounded-full h-2 mb-6 overflow-hidden">
+              <div id="step-progress-bar" class="bg-estate-gold h-2 transition-all duration-300 w-1/3"></div>
+            </div>
+
+            <form id="quote-form" onsubmit="handleQuoteSubmit(event)">
+              
+              <!-- STEP 1: Select Core Trade / Project -->
+              <div id="quote-step-1" class="space-y-4">
+                <label class="block text-sm font-bold text-estate-deep">Which trade service do you require for your Norfolk property?</label>
+                <div class="grid grid-cols-2 gap-2.5 text-xs sm:text-sm font-medium">
+                  
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Brick & Flintwork" class="accent-estate-gold" checked>
+                    <span>Brick & Flintwork</span>
+                  </label>
+
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Woodwork & Joinery" class="accent-estate-gold">
+                    <span>Woodwork & Carpentry</span>
+                  </label>
+
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Roofing & Leadwork" class="accent-estate-gold">
+                    <span>Roofing & Leadwork</span>
+                  </label>
+
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Drainage & Groundworks" class="accent-estate-gold">
+                    <span>Drainage & Groundworks</span>
+                  </label>
+
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Kitchen Fitting" class="accent-estate-gold">
+                    <span>Kitchen Fitting</span>
+                  </label>
+
+                  <label class="quote-option cursor-pointer border-2 border-slate-200 hover:border-estate-gold p-3 rounded-xl flex items-center gap-2.5 transition has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50/60">
+                    <input type="radio" name="project_type" value="Bathroom Fitting" class="accent-estate-gold">
+                    <span>Bathroom Fitting</span>
+                  </label>
+                </div>
+
+                <div class="pt-2">
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">Building Status or Heritage Designation</label>
+                  <select id="plans-status" class="w-full text-sm border border-slate-300 rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-estate-gold focus:outline-none">
+                    <option value="Period / Listed / Flint Cottage">Listed Building / Period Cottage</option>
+                    <option value="Standard Residential Home">Standard Residential Home / Extension</option>
+                    <option value="Barn Conversion / Farm Outbuilding">Barn Conversion / Outbuilding</option>
+                    <option value="Commercial / Other Property">Commercial or Estate Property</option>
+                  </select>
+                </div>
+
+                <button type="button" onclick="goToStep(2)" class="w-full bg-estate-forest hover:bg-estate-deep text-estate-goldLight font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-md mt-4">
+                  <span>Continue to Location & Timeline</span>
+                  <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+
+              <!-- STEP 2: Location, Timeline & Budget -->
+              <div id="quote-step-2" class="space-y-4 hidden">
+                <div>
+                  <label class="block text-sm font-bold text-estate-deep mb-1">Town / Postcode (Norfolk, Suffolk or Cambridgeshire)</label>
+                  <input type="text" id="quote-location" placeholder="e.g. Swaffham, Norwich, Bury St Edmunds, Cambridge, PE / IP / CB" required class="w-full text-sm border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-estate-gold focus:outline-none" value="Swaffham / Central Norfolk">
+                  <p class="text-[11px] text-slate-500 mt-1">We service all of Norfolk, Suffolk, and Cambridgeshire with free travel to assess your property.</p>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-bold text-estate-deep mb-1.5">When would you like work to commence?</label>
+                  <div class="grid grid-cols-3 gap-2 text-xs">
+                    <label class="border border-slate-300 rounded-lg p-2.5 text-center cursor-pointer has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50">
+                      <input type="radio" name="timeline" value="As soon as possible" class="hidden" checked>
+                      <span class="font-bold block text-estate-deep">Immediate</span>
+                      <span class="text-[10px] text-slate-500">Next 4-6 weeks</span>
+                    </label>
+                    <label class="border border-slate-300 rounded-lg p-2.5 text-center cursor-pointer has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50">
+                      <input type="radio" name="timeline" value="Within 3 to 6 months" class="hidden">
+                      <span class="font-bold block text-estate-deep">3 - 6 Months</span>
+                      <span class="text-[10px] text-slate-500">Planned work</span>
+                    </label>
+                    <label class="border border-slate-300 rounded-lg p-2.5 text-center cursor-pointer has-[:checked]:border-estate-gold has-[:checked]:bg-amber-50">
+                      <input type="radio" name="timeline" value="Planning / Feasibility" class="hidden">
+                      <span class="font-bold block text-estate-deep">Feasibility</span>
+                      <span class="text-[10px] text-slate-500">Pricing advice</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-bold text-estate-deep mb-1">Estimated Project Scope / Budget</label>
+                  <select id="quote-budget" class="w-full text-sm border border-slate-300 rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-estate-gold focus:outline-none">
+                    <option value="Under £5,000">Under £5,000 (Pointing / Minor drainage / Repair)</option>
+                    <option value="£5,000 - £15,000">£5,000 - £15,000 (Bathroom / Chimney flint / Roof repair)</option>
+                    <option value="£15,000 - £35,000">£15,000 - £35,000 (Full Kitchen / Re-roof / Major drainage)</option>
+                    <option value="£35,000+" selected>£35,000+ (Full heritage restoration / Extension)</option>
+                  </select>
+                </div>
+
+                <div class="flex gap-2 pt-2">
+                  <button type="button" onclick="goToStep(1)" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl text-xs transition">
+                    ← Back
+                  </button>
+                  <button type="button" onclick="goToStep(3)" class="w-2/3 bg-estate-forest hover:bg-estate-deep text-estate-goldLight font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition flex items-center justify-center gap-1.5">
+                    <span>Next: Contact Details</span>
+                    <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 3: Contact Details & Notes -->
+              <div id="quote-step-3" class="space-y-3.5 hidden">
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <label class="block text-xs font-bold text-estate-deep mb-1">Your Name *</label>
+                    <input type="text" id="quote-name" required placeholder="e.g. Richard Evans" class="w-full text-sm border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-estate-gold focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-estate-deep mb-1">Telephone *</label>
+                    <input type="tel" id="quote-phone" required placeholder="07123 456 789" class="w-full text-sm border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-estate-gold focus:outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-estate-deep mb-1">Email Address *</label>
+                  <input type="email" id="quote-email" required placeholder="name@domain.co.uk" class="w-full text-sm border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-estate-gold focus:outline-none">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-estate-deep mb-1">Summary of Works Needed (Optional)</label>
+                  <textarea id="quote-notes" rows="2" placeholder="e.g. Repointing flint facade, fitting new bespoke oak kitchen, checking drainage run..." class="w-full text-sm border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-estate-gold focus:outline-none"></textarea>
+                </div>
+
+                <div class="flex items-start gap-2.5 bg-estate-stone p-3 rounded-lg border border-estate-gold/30 text-xs text-estate-forest">
+                  <svg class="w-4 h-4 text-estate-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                  <span>We schedule an in-person visual inspection of your property with no cost and no hard sales tactics. Itemised quote delivered promptly.</span>
+                </div>
+
+                <div class="flex gap-2 pt-1">
+                  <button type="button" onclick="goToStep(2)" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl text-xs transition">
+                    ← Back
+                  </button>
+                  <button type="submit" id="submit-quote-btn" class="w-2/3 bg-estate-gold hover:bg-estate-goldHover text-estate-deep font-bold py-3.5 px-4 rounded-xl text-sm transition shadow-lg flex items-center justify-center gap-2">
+                    <span>Submit Free Quote Request</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div id="quote-success" class="hidden text-center py-6 space-y-4">
+              <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-2 border border-emerald-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h4 class="font-serif text-2xl font-bold text-estate-deep">Enquiry Received with Thanks</h4>
+              <p class="text-sm text-slate-600 max-w-sm mx-auto">
+                Thank you, <span id="confirm-name" class="font-bold text-slate-800"></span>. The team at JC Heritage Builders will review your details for <span id="confirm-type" class="font-semibold text-estate-goldHover"></span> in <span id="confirm-location" class="font-semibold"></span> and reach out to arrange your site visit.
+              </p>
+              
+              <div class="bg-estate-stone border border-estate-gold/30 rounded-xl p-3.5 text-xs text-slate-700 max-w-xs mx-auto text-left space-y-1">
+                <div><strong>Project Reference:</strong> <span class="font-mono text-estate-gold font-bold" id="quote-ref-code">#JCH-9412</span></div>
+                <div><strong>Direct Master Builder:</strong> 07767 234 921</div>
+                <div><strong>Coverage Region:</strong> Norfolk, Suffolk & Cambridgeshire</div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-2 justify-center">
+                <a href="tel:07767234921" class="inline-flex items-center justify-center gap-2 bg-estate-forest text-estate-goldLight text-xs font-bold py-2.5 px-4 rounded-lg hover:bg-estate-deep transition">
+                  <svg class="w-3.5 h-3.5 fill-current text-estate-gold" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+                  Need Urgent Assessment? Call Now
+                </a>
+                <button onclick="resetQuoteEngine()" class="text-xs text-slate-500 hover:text-slate-800 underline py-2">
+                  Submit another trade inquiry
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-6 border-b border-estate-sand shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-around gap-6 text-slate-700 font-semibold text-xs sm:text-sm">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-estate-forest text-estate-gold flex items-center justify-center font-serif font-bold text-sm border border-estate-gold/30">FL</div>
+          <span>Traditional Flint & Lime Mortar</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-estate-forest text-estate-gold flex items-center justify-center font-serif font-bold text-sm border border-estate-gold/30">WJ</div>
+          <span>Master Woodwork & Joinery</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-estate-forest text-estate-gold flex items-center justify-center font-serif font-bold text-sm border border-estate-gold/30">RF</div>
+          <span>Pantile & Lead Roofing</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-estate-forest text-estate-gold flex items-center justify-center font-serif font-bold text-sm border border-estate-gold/30">DR</div>
+          <span>Deep Drainage & Groundworks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-estate-stone/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Complete In-House Trades</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep mt-2">Comprehensive Heritage & Modern Building Services</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+          From the foundational earthworks and drainage up through structural flint, timber carpentry, weather-tight roofing, and exquisite interior fitting.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: All Brick & Flint Work -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between" id="heritage-craft">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">All Brick & Flint Work</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Norfolk knapped flint masonry, traditional lime-putty repointing, historic brickwork repairs, structural crack stitching, and heritage garden walls.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Authentic knapped and field flint matching</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Breathable non-hydraulic & hydraulic lime mortar</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Conservation area & listed cottage compliant</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Brick & Flintwork')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Brick & Flintwork →
+          </button>
+        </div>
+
+        <!-- Service 2: Woodwork & Carpentry -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">Woodwork & Carpentry</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Structural roof trusses, traditional oak timber framing, studwork, bespoke staircases, architectural skirtings, sash window restorations, and solid hardwood doors.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> 1st & 2nd fix architectural carpentry</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Green oak & seasoned timber restoration</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Custom mouldings & period architraves</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Woodwork & Joinery')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Woodwork →
+          </button>
+        </div>
+
+        <!-- Service 3: Roofing & Leadwork -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">Complete Roofing</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Norfolk red pantile roofs, natural slate, breathable underlay membranes, chimney stack re-pointing, lead valleys, flashings, and high-performance flat roof systems.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Full strip and re-tile with heritage pantiles</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Code 4 & 5 milled lead dressed valleys</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Storm repairs & dry-ridge installations</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Roofing & Leadwork')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Roofing →
+          </button>
+        </div>
+
+        <!-- Service 4: Drainage & Groundworks -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">Drainage & Groundworks</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Sub-surface rainwater soakaways, foul sewer connections, trenching, French drains around damp flint footings, inspection chambers, and footings.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Resolving water ingress around period walls</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Building regulation compliant storm drains</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Deep trenching & concrete strip foundations</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Drainage & Groundworks')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Drainage →
+          </button>
+        </div>
+
+        <!-- Service 5: Kitchen Fitting -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">Kitchen Fitting</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Turnkey kitchen installations including bespoke shaker cabinetry, solid oak and quartz worktops, kitchen islands, integrated appliances, plumbing, and task lighting.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Precise scribing into uneven period walls</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Integrated sinks, gas hobs & extractors</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Tiling, underfloor heating & timber floors</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Kitchen Fitting')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Kitchen Fitting →
+          </button>
+        </div>
+
+        <!-- Service 6: Bathroom Fitting -->
+        <div class="group bg-white rounded-2xl p-7 border border-estate-sand hover:border-estate-gold hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-estate-forest text-estate-gold flex items-center justify-center mb-5 group-hover:scale-105 transition border border-estate-gold/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mb-2.5">Bathroom Fitting</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+              Luxury bathroom renovations, walk-in wet rooms, freestanding roll-top baths, concealed pipework, designer porcelain tiling, and efficient power showers.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Complete tanking & waterproof membranes</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Period brassware & modern thermostatic mixers</li>
+              <li class="flex items-center gap-2"><span class="text-estate-gold font-bold">✓</span> Luxury underfloor heating matrices</li>
+            </ul>
+          </div>
+          <button onclick="prefillQuote('Bathroom Fitting')" class="w-full text-center bg-estate-stone group-hover:bg-estate-forest text-estate-deep group-hover:text-estate-goldLight border border-estate-gold/30 font-bold py-2.5 rounded-xl text-xs transition shadow-sm">
+            Enquire for Bathroom Fitting →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-white border-y border-estate-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Heritage Transformation</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep mt-1">See Our Norfolk Craftsmanship in Action</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">Historic Norfolk flint cottage restoration & extension in Castle Acre.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="#quote-engine" class="inline-flex items-center gap-2 bg-estate-forest text-estate-goldLight hover:bg-estate-deep px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm border border-estate-gold/30">
+            <span>Request Assessment for Your Home</span>
+            <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Interactive Slider Box -->
+        <div class="lg:col-span-8">
+          <div class="relative w-full h-80 sm:h-96 md:h-[460px] rounded-2xl overflow-hidden shadow-2xl select-none border-2 border-estate-sand" id="ba-container">
+            
+            <!-- Before Image (Weathered flint and dilapidated wall) -->
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Norfolk Property Before JC Heritage Restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+            <span class="absolute top-4 left-4 bg-estate-deep/90 text-estate-goldLight text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md shadow z-10 border border-estate-gold/30">Before Restoration</span>
+
+            <!-- After Image (Fully Restored Lime Flint & Crafted Woodwork) -->
+            <div id="ba-clip-wrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-estate-gold pointer-events-none">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Completed Restoration by JC Heritage Builders" class="absolute inset-0 w-full h-full object-cover max-w-none" id="ba-after-img" style="width: 100%; height: 100%;">
+              <span class="absolute top-4 left-4 bg-estate-forest text-estate-gold text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md shadow z-10 border border-estate-gold/40">Completed by JC Heritage</span>
+            </div>
+
+            <!-- Draggable range control -->
+            <input type="range" min="0" max="100" value="50" id="ba-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Slide to compare before and after">
+            
+            <!-- Visual slider handle line with Fleur-de-lis Crest -->
+            <div id="ba-handle" class="absolute top-0 bottom-0 left-1/2 -ml-0.5 w-1 bg-estate-gold shadow-[0_0_10px_rgba(201,154,62,0.6)] pointer-events-none flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-estate-deep text-estate-gold shadow-xl flex items-center justify-center font-bold text-xs border-2 border-estate-gold">
+                ⇄
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-xs text-slate-500 mt-3 font-medium">← Drag the slider horizontally to view the before and after transformation →</p>
+        </div>
+
+        <!-- Project Spotlight Details -->
+        <div class="lg:col-span-4 space-y-5">
+          <div class="bg-estate-stone p-6 rounded-2xl border border-estate-gold/30 shadow-md">
+            <span class="text-[11px] font-bold text-estate-gold uppercase tracking-wider">Featured Restoration</span>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mt-1">Castle Acre Period Cottage & Flint Extension</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Complete knapped flint repointing in natural lime mortar, structural timber roofing reinforcement, sub-base drainage diversion, and bespoke kitchen installation.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-estate-sand space-y-2.5 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Location:</span>
+                <span class="font-semibold text-estate-deep">Castle Acre / Swaffham Area</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Key Trades:</span>
+                <span class="font-semibold text-estate-deep">Flint, Woodwork, Drainage, Kitchen</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Outcome:</span>
+                <span class="font-semibold text-emerald-700">Damp Eliminated & Value Added</span>
+              </div>
+            </div>
+
+            <button onclick="prefillQuote('Brick & Flintwork')" class="mt-5 w-full bg-estate-forest hover:bg-estate-deep text-estate-gold font-bold py-3 rounded-xl text-xs transition shadow-sm flex items-center justify-center gap-2 border border-estate-gold/30">
+              <span>Get Estimate for Your Cottage</span>
+              <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+
+          <!-- Coverage Badge -->
+          <div class="bg-estate-deep text-white p-5 rounded-2xl space-y-2 text-xs border border-estate-gold/20">
+            <h4 class="font-serif font-bold text-estate-gold text-sm tracking-wide">Tri-County Service Area:</h4>
+            <div class="text-slate-300 leading-relaxed space-y-1">
+              <p><strong class="text-white">Norfolk:</strong> Swaffham, King's Lynn, Norwich, Castle Acre, Fakenham, Holt, North Norfolk coast.</p>
+              <p><strong class="text-white">Suffolk:</strong> Bury St Edmunds, Newmarket, Ipswich, Sudbury, Brandon, Mildenhall.</p>
+              <p><strong class="text-white">Cambridgeshire:</strong> Cambridge, Ely, Wisbech, March, Newmarket border.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 bg-estate-stone/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Mastery In Practice</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep mt-2">The JC Heritage Building Process</h2>
+        <p class="text-slate-600 text-sm mt-3">We respect the heritage of Norfolk properties with patient, historically appropriate methods and modern reliability.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        
+        <div class="bg-white rounded-2xl p-6 border border-estate-sand shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-estate-forest text-estate-gold font-serif font-bold flex items-center justify-center text-base mb-4 border border-estate-gold/30">I</div>
+          <h3 class="font-serif text-lg font-bold text-estate-deep mb-2">Detailed Site Inspection</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            We inspect structural condition, brick bonds, flint mortar condition, sub-surface drainage, and timber integrity first-hand.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-estate-sand shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-estate-forest text-estate-gold font-serif font-bold flex items-center justify-center text-base mb-4 border border-estate-gold/30">II</div>
+          <h3 class="font-serif text-lg font-bold text-estate-deep mb-2">Transparent Itemised Quote</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Every material, scaffold requirement, specialist lime mix, and trade phase is itemised with transparent pricing.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-estate-sand shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-estate-forest text-estate-gold font-serif font-bold flex items-center justify-center text-base mb-4 border border-estate-gold/30">III</div>
+          <h3 class="font-serif text-lg font-bold text-estate-deep mb-2">Dedicated On-Site Trades</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            We don't juggle fifteen jobs at once. Our dedicated team remains engaged on your project until full completion.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-estate-sand shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-estate-forest text-estate-gold font-serif font-bold flex items-center justify-center text-base mb-4 border border-estate-gold/30">IV</div>
+          <h3 class="font-serif text-lg font-bold text-estate-deep mb-2">Guaranteed Workmanship</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            From drainage flows to weathertight roofing and fine joinery, we ensure sign-off matches the highest standard.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="flex justify-center text-estate-gold gap-1 mb-2 font-bold">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep">Reputation Built on Proven Work</h2>
+        <p class="text-slate-600 text-sm mt-2">What homeowners in Norfolk say about JC Heritage Builders.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-estate-stone p-7 rounded-2xl border border-estate-gold/30 flex flex-col justify-between">
+          <div>
+            <div class="flex text-estate-gold text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "The flintwork repointing and brick repairs on our 18th-century Norfolk cottage were carried out to perfection. You can immediately see the pride they take in historical craftsmanship."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-estate-sand flex items-center justify-between">
+            <div>
+              <div class="font-serif font-bold text-sm text-estate-deep">Edward M.</div>
+              <div class="text-[10px] text-slate-500">Castle Acre Resident</div>
+            </div>
+            <span class="text-[10px] bg-white text-estate-forest px-2.5 py-1 rounded font-bold border border-estate-gold/20">Verified Work</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-estate-stone p-7 rounded-2xl border border-estate-gold/30 flex flex-col justify-between">
+          <div>
+            <div class="flex text-estate-gold text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "JC Heritage fitted our kitchen and handled the complex structural drainage in the garden that previous contractors couldn't diagnose. Honest, punctual, and exceptional quality of joinery."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-estate-sand flex items-center justify-between">
+            <div>
+              <div class="font-serif font-bold text-sm text-estate-deep">Sarah & David T.</div>
+              <div class="text-[10px] text-slate-500">Swaffham Homeowner</div>
+            </div>
+            <span class="text-[10px] bg-white text-estate-forest px-2.5 py-1 rounded font-bold border border-estate-gold/20">Kitchen & Drainage</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-estate-stone p-7 rounded-2xl border border-estate-gold/30 flex flex-col justify-between">
+          <div>
+            <div class="flex text-estate-gold text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "New pantile roof, lead flashing around two chimneys and complete luxury bathroom installation. Everything was completed on time, kept tidy every evening, and looks magnificent."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-estate-sand flex items-center justify-between">
+            <div>
+              <div class="font-serif font-bold text-sm text-estate-deep">G. Henderson</div>
+              <div class="text-[10px] text-slate-500">King's Lynn District</div>
+            </div>
+            <span class="text-[10px] bg-white text-estate-forest px-2.5 py-1 rounded font-bold border border-estate-gold/20">Roofing & Bath</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="py-20 bg-estate-stone/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Clear Advice</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep mt-2">Questions Regarding Heritage Building</h2>
+        <p class="text-slate-600 text-sm mt-2">Everything you need to know about our services across Norfolk.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-estate-sand bg-white rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 hover:bg-estate-stone font-bold text-estate-deep text-sm flex justify-between items-center transition">
+            <span>Do you use traditional lime mortar for brick and flint restoration?</span>
+            <span id="faq-icon-1" class="text-estate-gold font-serif font-bold text-xl">+</span>
+          </button>
+          <div id="faq-body-1" class="hidden p-5 text-xs sm:text-sm text-slate-600 bg-white border-t border-estate-sand leading-relaxed">
+            Yes. Modern cement mortars trap moisture inside soft historic Norfolk bricks and flint walls, accelerating damp and spalling. We formulate authentic lime mortars (hydraulic and non-hydraulic lime-putty) matched to the period aggregates of your property.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-estate-sand bg-white rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 hover:bg-estate-stone font-bold text-estate-deep text-sm flex justify-between items-center transition">
+            <span>Can you coordinate both drainage groundworks and interior kitchen/bathroom fitting?</span>
+            <span id="faq-icon-2" class="text-estate-gold font-serif font-bold text-xl">+</span>
+          </button>
+          <div id="faq-body-2" class="hidden p-5 text-xs sm:text-sm text-slate-600 bg-white border-t border-estate-sand leading-relaxed">
+            Absolutely. Because our team handles all trades in-house—including drainage, structural woodwork, plumbing, tiling, and cabinetry—we eliminate coordination delays between separate contractors.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-estate-sand bg-white rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 hover:bg-estate-stone font-bold text-estate-deep text-sm flex justify-between items-center transition">
+            <span>What areas across East Anglia do JC Heritage Builders cover?</span>
+            <span id="faq-icon-3" class="text-estate-gold font-serif font-bold text-xl">+</span>
+          </button>
+          <div id="faq-body-3" class="hidden p-5 text-xs sm:text-sm text-slate-600 bg-white border-t border-estate-sand leading-relaxed">
+            We provide full coverage throughout Norfolk, Suffolk, and Cambridgeshire. Our teams regularly travel across Norwich, Swaffham, King's Lynn, Bury St Edmunds, Newmarket, Ely, Cambridge, and surrounding villages with no additional travel consultation fee.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-estate-sand bg-white rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 hover:bg-estate-stone font-bold text-estate-deep text-sm flex justify-between items-center transition">
+            <span>How does the free quote and site survey process work?</span>
+            <span id="faq-icon-4" class="text-estate-gold font-serif font-bold text-xl">+</span>
+          </button>
+          <div id="faq-body-4" class="hidden p-5 text-xs sm:text-sm text-slate-600 bg-white border-t border-estate-sand leading-relaxed">
+            Simply submit the online quote form or call us directly. We will schedule a visit to inspect your brick, flint, roof, drainage, or interior space, discuss your requirements, and provide a clear, itemised specification with zero obligation.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-estate-deep py-16 text-white border-t border-estate-gold/30">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+      <div class="w-12 h-12 mx-auto text-estate-gold">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M28 73 L72 73 L68 64 L32 64 Z" fill="#c99a3e"/>
+          <ellipse cx="50" cy="74" rx="20" ry="2.5" fill="#e3be6d"/>
+          <path d="M50 14 C48 30 43 45 42 62 C46 63 54 63 58 62 C57 45 52 30 50 14 Z" fill="#e3be6d"/>
+          <path d="M42 61 C40 45 32 30 20 28 C22 36 29 44 33 49 C30 42 27 36 22 32 C26 44 32 54 40 62 Z" fill="#c99a3e"/>
+          <path d="M58 61 C60 45 68 30 80 28 C78 36 71 44 67 49 C70 42 73 36 78 32 C74 44 68 54 60 62 Z" fill="#c99a3e"/>
+        </svg>
+      </div>
+      <span class="text-estate-gold font-bold text-xs uppercase tracking-widest block">Quality That Stands the Test of Generations</span>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">Plan Your Next Norfolk Building Project</h2>
+      <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+        Speak directly with JC Heritage Builders on <a href="tel:07767234921" class="text-estate-gold font-bold hover:underline">07767 234 921</a> or schedule your free survey online.
+      </p>
+
+      <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#quote-engine" class="bg-estate-gold hover:bg-estate-goldHover text-estate-deep font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg flex items-center justify-center gap-2">
+          <span>Start Online Quote</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="tel:07767234921" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-estate-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          Call 07767 234 921
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-estate-deep text-slate-400 py-12 text-xs border-t border-estate-forest">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+      
+      <div class="space-y-3">
+        <!-- Enlarged Footer Brand Crest -->
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-estate-forest rounded-xl flex items-center justify-center p-1.5 border border-estate-gold/40">
+            <svg class="w-full h-full text-estate-gold" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M28 73 L72 73 L68 64 L32 64 Z" fill="#c99a3e"/>
+              <ellipse cx="50" cy="74" rx="20" ry="2.5" fill="#e3be6d"/>
+              <path d="M50 14 C48 30 43 45 42 62 C46 63 54 63 58 62 C57 45 52 30 50 14 Z" fill="#e3be6d"/>
+              <path d="M42 61 C40 45 32 30 20 28 C22 36 29 44 33 49 C30 42 27 36 22 32 C26 44 32 54 40 62 Z" fill="#c99a3e"/>
+              <path d="M58 61 C60 45 68 30 80 28 C78 36 71 44 67 49 C70 42 73 36 78 32 C74 44 68 54 60 62 Z" fill="#c99a3e"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-serif font-bold text-white text-lg tracking-wider uppercase leading-none">
+              <span class="text-estate-gold">JC HERITAGE</span> BUILDERS
+            </div>
+            <div class="text-[10px] text-estate-gold tracking-widest uppercase mt-0.5">Norfolk • Suffolk • Cambridgeshire</div>
+          </div>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Specialists in traditional East Anglian brickwork, knapped flint masonry, structural woodwork, roofing, drainage, bespoke kitchen fitting, and luxury bathrooms.
+        </p>
+        <div class="text-[11px] text-estate-goldLight">
+          Master Craftsmen • Period Restorations • Free Surveys
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Primary Services</h4>
+        <ul class="space-y-1.5 text-slate-400">
+          <li>• All Brick & Flint Work</li>
+          <li>• Architectural Woodwork & Joinery</li>
+          <li>• Full Roofing & Leadwork</li>
+          <li>• Drainage & Sub-Surface Groundworks</li>
+          <li>• Bespoke Kitchen Fitting</li>
+          <li>• Luxury Bathroom Installations</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Regional Coverage</h4>
+        <ul class="space-y-2 text-slate-400">
+          <li class="flex items-center gap-2">
+            <span class="text-estate-gold font-bold">Phone:</span>
+            <a href="tel:07767234921" class="text-white hover:underline">07767 234 921</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-estate-gold font-bold">Google Maps:</span>
+            <a href="https://www.google.com/maps/place/JC+Heritage+Builders/@52.7256219,-0.6874463,8z/data=!3m1!4b1!4m6!3m5!1s0xa76d3a493045aea3:0xc04d2214a5bf883b!8m2!3d52.7329386!4d0.6315043!16s%2Fg%2F11kr7rh13k" target="_blank" rel="noopener" class="text-estate-goldLight hover:underline">View on Google Maps</a>
+          </li>
+          <li><strong>Coverage:</strong> Norfolk, Suffolk & Cambridgeshire</li>
+          <li><strong>Hours:</strong> Mon - Sat: 07:30 - 18:00</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Quick Estimate</h4>
+        <p class="mb-3 text-[11px] text-slate-400">Obtain an itemised quote for your home restoration across Norfolk, Suffolk & Cambridgeshire without obligation.</p>
+        <a href="#quote-engine" class="inline-block bg-estate-gold hover:bg-estate-goldHover text-estate-deep font-bold px-4 py-2.5 rounded-lg text-xs transition">
+          Launch Quote Builder
+        </a>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-slate-800 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-2 text-slate-500">
+      <div>© 2026 JC Heritage Builders. All rights reserved. Norfolk, Suffolk & Cambridgeshire.</div>
+      <div>Crafted with traditional pride & architectural integrity.</div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 sm:hidden flex items-center justify-between gap-3 shadow-2xl">
+    <a href="tel:07767234921" class="flex-1 bg-estate-forest text-estate-goldLight text-center py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow">
+      <svg class="w-3.5 h-3.5 text-estate-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+      <span>Call Builder</span>
+    </a>
+    <a href="#quote-engine" class="flex-1 bg-estate-gold text-estate-deep text-center py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1 shadow">
+      <span>Get Free Quote</span>
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+    </a>
+  </div>
+
+  <script>
+    // State management for Multi-step Wizard
+    let currentStep = 1;
+
+    function goToStep(step) {
+      if (step === 2 && currentStep === 1) {
+        currentStep = 2;
+      } else if (step === 3 && currentStep === 2) {
+        const locationInput = document.getElementById('quote-location');
+        if (!locationInput.value.trim()) {
+          locationInput.focus();
+          locationInput.classList.add('border-rose-500');
+          return;
+        }
+        locationInput.classList.remove('border-rose-500');
+        currentStep = 3;
+      } else {
+        currentStep = step;
+      }
+
+      // Hide all step sections
+      document.getElementById('quote-step-1').classList.add('hidden');
+      document.getElementById('quote-step-2').classList.add('hidden');
+      document.getElementById('quote-step-3').classList.add('hidden');
+
+      // Reveal current step
+      document.getElementById(`quote-step-${currentStep}`).classList.remove('hidden');
+
+      // Update indicator and progress bar
+      document.getElementById('current-step-indicator').textContent = currentStep;
+      const progressPercent = currentStep === 1 ? '33%' : (currentStep === 2 ? '66%' : '100%');
+      document.getElementById('step-progress-bar').style.width = progressPercent;
+    }
+
+    // Prefill quote when user clicks a service card
+    function prefillQuote(serviceName) {
+      const radios = document.getElementsByName('project_type');
+      for (const radio of radios) {
+        if (radio.value === serviceName) {
+          radio.checked = true;
+          break;
+        }
+      }
+      document.getElementById('quote-engine').scrollIntoView({ behavior: 'smooth' });
+      goToStep(1);
+    }
+
+    // Handle quote submission without page refresh
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('quote-name').value.trim();
+      const phone = document.getElementById('quote-phone').value.trim();
+      const location = document.getElementById('quote-location').value.trim();
+      const projectType = document.querySelector('input[name="project_type"]:checked').value;
+
+      if (!name || !phone) return;
+
+      document.getElementById('confirm-name').textContent = name;
+      document.getElementById('confirm-type').textContent = projectType;
+      document.getElementById('confirm-location').textContent = location || 'Norfolk';
+      
+      const randomRef = 'JCH-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('quote-ref-code').textContent = '#' + randomRef;
+
+      document.getElementById('quote-form').classList.add('hidden');
+      document.getElementById('quote-success').classList.remove('hidden');
+    }
+
+    // Reset quote form
+    function resetQuoteEngine() {
+      document.getElementById('quote-form').reset();
+      document.getElementById('quote-form').classList.remove('hidden');
+      document.getElementById('quote-success').classList.add('hidden');
+      goToStep(1);
+    }
+
+    // Before/After comparison slider logic
+    const baSlider = document.getElementById('ba-slider');
+    const baClipWrapper = document.getElementById('ba-clip-wrapper');
+    const baHandle = document.getElementById('ba-handle');
+    const baContainer = document.getElementById('ba-container');
+
+    if (baSlider && baClipWrapper && baHandle) {
+      baSlider.addEventListener('input', function(e) {
+        const val = e.target.value;
+        baClipWrapper.style.width = val + '%';
+        baHandle.style.left = val + '%';
+      });
+
+      function syncSliderWidth() {
+        const afterImg = document.getElementById('ba-after-img');
+        if (afterImg && baContainer) {
+          afterImg.style.width = baContainer.offsetWidth + 'px';
+        }
+      }
+      window.addEventListener('resize', syncSliderWidth);
+      window.addEventListener('DOMContentLoaded', syncSliderWidth);
+      syncSliderWidth();
+    }
+
+    // Accordion Toggle
+    function toggleFaq(index) {
+      const body = document.getElementById(`faq-body-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      const isHidden = body.classList.contains('hidden');
+
+      for (let i = 1; i <= 4; i++) {
+        const b = document.getElementById(`faq-body-${i}`);
+        const ic = document.getElementById(`faq-icon-${i}`);
+        if (b) b.classList.add('hidden');
+        if (ic) ic.textContent = '+';
+      }
+
+      if (isHidden) {
+        body.classList.remove('hidden');
+        icon.textContent = '−';
+      }
+    }
+
+    // Mobile nav toggle
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
