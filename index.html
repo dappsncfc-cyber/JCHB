@@ -563,75 +563,182 @@
   <section id="projects" class="py-20 bg-white border-y border-estate-sand">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
         <div>
-          <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Heritage Transformation</span>
+          <span class="text-estate-gold font-extrabold text-xs uppercase tracking-widest">Heritage & Craftsmanship Gallery</span>
           <h2 class="font-serif text-3xl sm:text-4xl font-bold text-estate-deep mt-1">See Our Norfolk Craftsmanship in Action</h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2">Historic Norfolk flint cottage restoration & extension in Castle Acre.</p>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">Explore active site progress, traditional brick & flint masonry, lime pointing, and completed projects across Norfolk & East Anglia.</p>
         </div>
-        <div class="mt-4 md:mt-0">
-          <a href="#quote-engine" class="inline-flex items-center gap-2 bg-estate-forest text-estate-goldLight hover:bg-estate-deep px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm border border-estate-gold/30">
-            <span>Request Assessment for Your Home</span>
+        <div class="mt-4 md:mt-0 flex items-center gap-3">
+          <button id="ticker-prev" aria-label="Previous Project Photo" class="w-10 h-10 rounded-full bg-estate-stone border border-estate-sand hover:border-estate-gold text-estate-deep flex items-center justify-center shadow-sm transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="ticker-next" aria-label="Next Project Photo" class="w-10 h-10 rounded-full bg-estate-stone border border-estate-sand hover:border-estate-gold text-estate-deep flex items-center justify-center shadow-sm transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <a href="#quote-engine" class="inline-flex items-center gap-2 bg-estate-forest text-estate-goldLight hover:bg-estate-deep px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm border border-estate-gold/30 ml-2">
+            <span>Request Assessment</span>
             <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 items-center">
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Interactive Slider Box -->
-        <div class="lg:col-span-8">
-          <div class="relative w-full h-80 sm:h-96 md:h-[460px] rounded-2xl overflow-hidden shadow-2xl select-none border-2 border-estate-sand" id="ba-container">
+        <!-- Interactive Continuous Picture Ticker & Viewer Box -->
+        <div class="lg:col-span-8 space-y-4">
+          <!-- Main Display Photo Box -->
+          <div class="relative w-full h-80 sm:h-96 md:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-2 border-estate-sand group bg-slate-900" id="gallery-main-container">
+            <img id="gallery-active-img" src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.42.jpeg" alt="JC Heritage Craftsmen Project Work" class="w-full h-full object-cover transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
             
-            <!-- Before Image (Weathered flint and dilapidated wall) -->
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Norfolk Property Before JC Heritage Restoration" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
-            <span class="absolute top-4 left-4 bg-estate-deep/90 text-estate-goldLight text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md shadow z-10 border border-estate-gold/30">Before Restoration</span>
-
-            <!-- After Image (Fully Restored Lime Flint & Crafted Woodwork) -->
-            <div id="ba-clip-wrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-estate-gold pointer-events-none">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Completed Restoration by JC Heritage Builders" class="absolute inset-0 w-full h-full object-cover max-w-none" id="ba-after-img" style="width: 100%; height: 100%;">
-              <span class="absolute top-4 left-4 bg-estate-forest text-estate-gold text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md shadow z-10 border border-estate-gold/40">Completed by JC Heritage</span>
+            <div class="absolute top-4 left-4 bg-estate-deep/90 text-estate-goldLight text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md shadow border border-estate-gold/30 backdrop-blur-sm flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              <span id="gallery-active-badge">Norfolk Flint & Brick Masonry</span>
             </div>
 
-            <!-- Draggable range control -->
-            <input type="range" min="0" max="100" value="50" id="ba-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Slide to compare before and after">
-            
-            <!-- Visual slider handle line with Fleur-de-lis Crest -->
-            <div id="ba-handle" class="absolute top-0 bottom-0 left-1/2 -ml-0.5 w-1 bg-estate-gold shadow-[0_0_10px_rgba(201,154,62,0.6)] pointer-events-none flex items-center justify-center">
-              <div class="w-10 h-10 rounded-full bg-estate-deep text-estate-gold shadow-xl flex items-center justify-center font-bold text-xs border-2 border-estate-gold">
-                ⇄
+            <button id="gallery-zoom-btn" class="absolute top-4 right-4 bg-black/60 hover:bg-estate-deep text-white p-2.5 rounded-lg border border-white/20 shadow backdrop-blur-sm transition flex items-center gap-1.5 text-xs font-semibold">
+              <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m-3-3h6"/></svg>
+              <span>Enlarge Photo</span>
+            </button>
+
+            <div class="absolute bottom-4 left-4 right-4 text-white flex items-end justify-between pointer-events-none">
+              <div>
+                <h3 id="gallery-active-title" class="font-serif text-xl sm:text-2xl font-bold text-white drop-shadow">Terraced Garden Masonry & Steps</h3>
+                <p id="gallery-active-desc" class="text-xs text-slate-200 mt-1 max-w-lg drop-shadow">Hand-laid Norfolk red brick coping, lime mortar bed, and knapped flint retaining wall construction.</p>
               </div>
+              <span id="gallery-counter" class="text-xs font-extrabold bg-estate-gold/90 text-estate-deep px-3 py-1 rounded-full shadow border border-amber-200 shrink-0">1 / 29</span>
             </div>
           </div>
-          <p class="text-center text-xs text-slate-500 mt-3 font-medium">← Drag the slider horizontally to view the before and after transformation →</p>
+
+          <!-- Ticker Carousel Strip -->
+          <div class="relative overflow-hidden rounded-xl border border-estate-sand bg-estate-stone/60 p-3 shadow-inner">
+            <div id="ticker-track" class="flex gap-3 overflow-x-auto scroll-smooth no-scrollbar py-1" style="scrollbar-width: none; -ms-overflow-style: none;">
+              <!-- Dynamic JS will populate items or inline list below -->
+              <button onclick="setActiveGalleryImage(0)" class="gallery-thumb-btn active shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.42.jpeg" alt="Norfolk Brick Steps" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(1)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.42 (1).jpeg" alt="Fireplace Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(2)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.43.jpeg" alt="Historic Brick Wall" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(3)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (1).jpeg" alt="Work in Progress Site" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(4)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (2).jpeg" alt="Traditional Brickwork" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(5)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.44.jpeg" alt="Masonry Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(6)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.44 (1).jpeg" alt="Lime Repointing Work" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(7)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 15.59.45.jpeg" alt="Norfolk Cottage Wall" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(8)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.01.jpeg" alt="Brick Arch Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(9)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.02.jpeg" alt="Flint Infill Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(10)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (1).jpeg" alt="Heritage Masonry Work" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(11)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (2).jpeg" alt="Garden Steps Detail" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(12)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (3).jpeg" alt="Flint & Lime Wall" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(13)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04.jpeg" alt="Chimney Repointing" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(14)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (1).jpeg" alt="Heritage Brickwork" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(15)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (2).jpeg" alt="Subbase & Masonry" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(16)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (3).jpeg" alt="Red Brick Masonry" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(17)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (4).jpeg" alt="Lime Mortar Pointing" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(18)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (5).jpeg" alt="Cottage Wall Work" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(19)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (6).jpeg" alt="Flint Retaining Wall" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(20)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (7).jpeg" alt="Period Fireplace Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(21)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05.jpeg" alt="Masonry Craftsmanship" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(22)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (1).jpeg" alt="Patio Masonry Detail" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(23)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (2).jpeg" alt="Lime Mortar Restoration" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(24)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (3).jpeg" alt="Completed Garden Terrace" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(25)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (4).jpeg" alt="Norfolk Brickwork Detail" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(26)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (5).jpeg" alt="Cottage Chimney Work" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(27)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (6).jpeg" alt="Brick Archway Feature" class="w-full h-full object-cover">
+              </button>
+              <button onclick="setActiveGalleryImage(28)" class="gallery-thumb-btn shrink-0 relative w-24 h-20 rounded-lg overflow-hidden border-2 border-transparent hover:border-estate-gold shadow transition transform hover:scale-105 focus:outline-none">
+                <img src="images/gallery/WhatsApp Image 2026-10-02 at 16.02.06.jpeg" alt="Lime Mortar Pointed Brick Wall" class="w-full h-full object-cover">
+              </button>
+            </div>
+          </div>
+          <p class="text-center text-xs text-slate-500 font-medium flex items-center justify-center gap-2">
+            <span>← Click thumbnails or use arrows to navigate through project photos →</span>
+          </p>
         </div>
 
-        <!-- Project Spotlight Details -->
+        <!-- Project Spotlight Details - General Works Showcase -->
         <div class="lg:col-span-4 space-y-5">
           <div class="bg-estate-stone p-6 rounded-2xl border border-estate-gold/30 shadow-md">
-            <span class="text-[11px] font-bold text-estate-gold uppercase tracking-wider">Featured Restoration</span>
-            <h3 class="font-serif text-2xl font-bold text-estate-deep mt-1">Castle Acre Period Cottage & Flint Extension</h3>
+            <span class="text-[11px] font-bold text-estate-gold uppercase tracking-wider">Craftsmanship Showcase</span>
+            <h3 class="font-serif text-2xl font-bold text-estate-deep mt-1">Works in Progress & Completed Projects</h3>
             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              Complete knapped flint repointing in natural lime mortar, structural timber roofing reinforcement, sub-base drainage diversion, and bespoke kitchen installation.
+              Snapshots from our live project sites across Norfolk, Suffolk, and Cambridgeshire. From structural brick repointing and bespoke hearths to traditional knapped flint walls and hand-built garden terracing.
             </p>
 
             <div class="mt-4 pt-4 border-t border-estate-sand space-y-2.5 text-xs">
-              <div class="flex justify-between">
-                <span class="text-slate-500">Location:</span>
-                <span class="font-semibold text-estate-deep">Castle Acre / Swaffham Area</span>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Traditional Trades:</span>
+                <span class="font-semibold text-estate-deep">Lime Pointing & Brickwork</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">Key Trades:</span>
-                <span class="font-semibold text-estate-deep">Flint, Woodwork, Drainage, Kitchen</span>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Specialist Features:</span>
+                <span class="font-semibold text-estate-deep">Norfolk Flint, Steps & Hearths</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">Outcome:</span>
-                <span class="font-semibold text-emerald-700">Damp Eliminated & Value Added</span>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Project Types:</span>
+                <span class="font-semibold text-estate-deep">Cottages, Barns, Extensions & Gardens</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Quality Standard:</span>
+                <span class="font-semibold text-emerald-700">100% Breathable Mortar & Master Finish</span>
               </div>
             </div>
 
             <button onclick="prefillQuote('Brick & Flintwork')" class="mt-5 w-full bg-estate-forest hover:bg-estate-deep text-estate-gold font-bold py-3 rounded-xl text-xs transition shadow-sm flex items-center justify-center gap-2 border border-estate-gold/30">
-              <span>Get Estimate for Your Cottage</span>
+              <span>Request Quote for Your Project</span>
               <svg class="w-4 h-4 text-estate-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
           </div>
@@ -1025,28 +1132,312 @@
       goToStep(1);
     }
 
-    // Before/After comparison slider logic
-    const baSlider = document.getElementById('ba-slider');
-    const baClipWrapper = document.getElementById('ba-clip-wrapper');
-    const baHandle = document.getElementById('ba-handle');
-    const baContainer = document.getElementById('ba-container');
-
-    if (baSlider && baClipWrapper && baHandle) {
-      baSlider.addEventListener('input', function(e) {
-        const val = e.target.value;
-        baClipWrapper.style.width = val + '%';
-        baHandle.style.left = val + '%';
-      });
-
-      function syncSliderWidth() {
-        const afterImg = document.getElementById('ba-after-img');
-        if (afterImg && baContainer) {
-          afterImg.style.width = baContainer.offsetWidth + 'px';
-        }
+    // Dynamic Interactive Project Gallery Ticker Logic
+    const galleryData = [
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42.jpeg",
+        badge: "Norfolk Flint & Brick Masonry",
+        title: "Terraced Garden Steps & Retaining Wall",
+        desc: "Hand-laid Norfolk red brick coping, lime mortar bed, and knapped flint retaining wall construction."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42 (1).jpeg",
+        badge: "Period Hearth Restoration",
+        title: "Exposed Brick Fireplace & Lime Mortar",
+        desc: "Restored historic fireplace opening with reclaimed imperial Norfolk bricks and traditional lime pointing."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43.jpeg",
+        badge: "Structural Brickwork",
+        title: "Garden Boundary Wall Restoration",
+        desc: "Precision brick laying and lime mortar jointing on classic Norfolk estate walling."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (1).jpeg",
+        badge: "Active Site Progress",
+        title: "Heritage Restoration in Progress",
+        desc: "Careful removal of degraded mortar prior to traditional NHL lime repointing."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (2).jpeg",
+        badge: "Traditional Masonry",
+        title: "Subbase Prep & Wall Construction",
+        desc: "Establishing solid footing and damp course for garden brickwork."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44.jpeg",
+        badge: "Lime Mortar Finishing",
+        title: "Hand-brushed Lime Jointing Detail",
+        desc: "Authentic, breathable lime finish matching existing historical masonry."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44 (1).jpeg",
+        badge: "Wall Restoration",
+        title: "Norfolk Cottage Wall Pointing",
+        desc: "Restoring wall stability and weather-proofing on centuries-old masonry."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.45.jpeg",
+        badge: "Flint & Brickwork",
+        title: "Terrace Construction Complete",
+        desc: "Seamless blending of reclaimed red brick header courses with flint fill."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.01.jpeg",
+        badge: "Brick Archway",
+        title: "Structural Brick Arch Restoration",
+        desc: "Hand-carved wooden centring arch used to rebuild structural brick opening."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02.jpeg",
+        badge: "Lime & Flint Infill",
+        title: "Knapped Flint & Mortar Bedding",
+        desc: "Traditional East Anglian flint knapping set in coarse NHL lime mortar."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (1).jpeg",
+        badge: "Site Works",
+        title: "Masonry Elevation Detail",
+        desc: "High quality detail on coursed brickwork and structural piers."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (2).jpeg",
+        badge: "Garden Features",
+        title: "Brick Step Riser & Paver Patio",
+        desc: "Custom step treads in handmade clay pavers and facing bricks."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (3).jpeg",
+        badge: "Flint & Lime Wall",
+        title: "Historic Flint Panel Repointing",
+        desc: "Restored field flint paneling in breathable lime mortar."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04.jpeg",
+        badge: "Roof & Chimney",
+        title: "Chimney Stack Repointing & Lead Flashings",
+        desc: "Weather-tight lime repointing and code 4 lead flashing repair."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (1).jpeg",
+        badge: "Estate Brickwork",
+        title: "Hand-picked Norfolk Brick Piering",
+        desc: "Constructed with traditional mortar joints to match original estate buildings."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (2).jpeg",
+        badge: "Groundworks & Foundations",
+        title: "Foundation & Subbase Preparation",
+        desc: "Excavation and subbase compaction for garden brick terracing."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (3).jpeg",
+        badge: "Red Brick Detailing",
+        title: "Parapet Wall & Coping Courses",
+        desc: "Precision brick capping to protect against frost and water ingress."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (4).jpeg",
+        badge: "Lime Mortar Work",
+        title: "Flush Lime Pointing Application",
+        desc: "Traditional flush joint finish protecting soft historic brickwork."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (5).jpeg",
+        badge: "Cottage Facade",
+        title: "Period Cottage Facade Restoration",
+        desc: "Restored exterior brickwork on period Norfolk home."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (6).jpeg",
+        badge: "Flint Retaining Wall",
+        title: "Flint & Brick Terrace Boundary",
+        desc: "Combination knapped flint walling with solid red brick quoins."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (7).jpeg",
+        badge: "Internal Brickwork",
+        title: "Bespoke Brick Chimney & Hearth",
+        desc: "Exposed brick fireplace surround crafted for woodburning stove installation."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05.jpeg",
+        badge: "Site Craftsmanship",
+        title: "Courtyard Brick Laying",
+        desc: "Laying reclaimed brick pavers in classic herringbone pattern."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (1).jpeg",
+        badge: "Patio & Steps",
+        title: "Finished Brick & Clay Tile Steps",
+        desc: "Cleaned and sealed garden steps with integrated side walls."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (2).jpeg",
+        badge: "Lime Pointing",
+        title: "Lime Mortar Curing & Finishing",
+        desc: "Controlled damp-curing process ensuring long-lasting lime bond."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (3).jpeg",
+        badge: "Garden Terrace",
+        title: "Completed Garden Terrace & Steps",
+        desc: "Fully restored garden level transition in red brick and flint."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (4).jpeg",
+        badge: "Brick Detailing",
+        title: "Soldier Course Brick Heading",
+        desc: "Decorative soldier course brickwork over garden walling."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (5).jpeg",
+        badge: "Cottage Chimney",
+        title: "Flue & Brick Stack Reconstruction",
+        desc: "Rebuilding dangerous chimney stack using matching local bricks."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (6).jpeg",
+        badge: "Brick Feature Arch",
+        title: "Reconstructed Brick Gateway Arch",
+        desc: "Structural garden archway built using traditional wooden former."
+      },
+      {
+        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.06.jpeg",
+        badge: "Lime Pointing Complete",
+        title: "Fully Pointed Norfolk Brick Elevation",
+        desc: "Finished NHL lime mortar pointing offering breathability and heritage beauty."
       }
-      window.addEventListener('resize', syncSliderWidth);
-      window.addEventListener('DOMContentLoaded', syncSliderWidth);
-      syncSliderWidth();
+    ];
+
+    let activeGalleryIdx = 0;
+    let tickerAutoTimer = null;
+
+    function setActiveGalleryImage(index) {
+      if (index < 0) index = galleryData.length - 1;
+      if (index >= galleryData.length) index = 0;
+      activeGalleryIdx = index;
+
+      const item = galleryData[index];
+      const imgEl = document.getElementById('gallery-active-img');
+      const badgeEl = document.getElementById('gallery-active-badge');
+      const titleEl = document.getElementById('gallery-active-title');
+      const descEl = document.getElementById('gallery-active-desc');
+      const counterEl = document.getElementById('gallery-counter');
+
+      if (imgEl) {
+        imgEl.style.opacity = '0.3';
+        setTimeout(() => {
+          imgEl.src = item.src;
+          imgEl.style.opacity = '1';
+        }, 150);
+      }
+      if (badgeEl) badgeEl.textContent = item.badge;
+      if (titleEl) titleEl.textContent = item.title;
+      if (descEl) descEl.textContent = item.desc;
+      if (counterEl) counterEl.textContent = `${index + 1} / ${galleryData.length}`;
+
+      // Highlight active thumbnail & scroll into view
+      const thumbs = document.querySelectorAll('.gallery-thumb-btn');
+      thumbs.forEach((thumb, i) => {
+        if (i === index) {
+          thumb.classList.add('border-estate-gold');
+          thumb.classList.remove('border-transparent');
+          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          thumb.classList.remove('border-estate-gold');
+          thumb.classList.add('border-transparent');
+        }
+      });
+    }
+
+    function startGalleryAutoPlay() {
+      stopGalleryAutoPlay();
+      tickerAutoTimer = setInterval(() => {
+        setActiveGalleryImage(activeGalleryIdx + 1);
+      }, 4500);
+    }
+
+    function stopGalleryAutoPlay() {
+      if (tickerAutoTimer) clearInterval(tickerAutoTimer);
+    }
+
+    // Attach event listeners for prev/next & zoom
+    document.addEventListener('DOMContentLoaded', () => {
+      const prevBtn = document.getElementById('ticker-prev');
+      const nextBtn = document.getElementById('ticker-next');
+      const track = document.getElementById('ticker-track');
+      const zoomBtn = document.getElementById('gallery-zoom-btn');
+      const mainBox = document.getElementById('gallery-main-container');
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          stopGalleryAutoPlay();
+          setActiveGalleryImage(activeGalleryIdx - 1);
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          stopGalleryAutoPlay();
+          setActiveGalleryImage(activeGalleryIdx + 1);
+        });
+      }
+
+      if (mainBox) {
+        mainBox.addEventListener('mouseenter', stopGalleryAutoPlay);
+        mainBox.addEventListener('mouseleave', startGalleryAutoPlay);
+      }
+      if (track) {
+        track.addEventListener('mouseenter', stopGalleryAutoPlay);
+        track.addEventListener('mouseleave', startGalleryAutoPlay);
+      }
+
+      if (zoomBtn) {
+        zoomBtn.addEventListener('click', openLightbox);
+      }
+
+      startGalleryAutoPlay();
+    });
+
+    // Lightbox modal functionality
+    function openLightbox() {
+      stopGalleryAutoPlay();
+      const item = galleryData[activeGalleryIdx];
+      let modal = document.getElementById('gallery-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'gallery-modal';
+        modal.className = 'fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 transition-opacity';
+        modal.innerHTML = `
+          <div class="relative max-w-5xl w-full flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-estate-gold text-2xl font-bold flex items-center gap-2 bg-slate-800/80 px-4 py-1.5 rounded-lg border border-white/20">
+              ✕ Close
+            </button>
+            <img id="modal-img" src="" alt="" class="max-h-[80vh] w-auto object-contain rounded-xl shadow-2xl border-2 border-estate-sand/30">
+            <div class="mt-4 text-center text-white">
+              <span id="modal-badge" class="text-estate-gold text-xs font-bold uppercase tracking-widest block mb-1"></span>
+              <h4 id="modal-title" class="font-serif text-2xl font-bold"></h4>
+              <p id="modal-desc" class="text-xs text-slate-300 mt-1 max-w-xl mx-auto"></p>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeLightbox();
+        });
+      }
+
+      document.getElementById('modal-img').src = item.src;
+      document.getElementById('modal-badge').textContent = item.badge;
+      document.getElementById('modal-title').textContent = item.title;
+      document.getElementById('modal-desc').textContent = item.desc;
+      modal.classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('gallery-modal');
+      if (modal) modal.classList.add('hidden');
+      startGalleryAutoPlay();
     }
 
     // Accordion Toggle
