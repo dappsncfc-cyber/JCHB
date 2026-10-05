@@ -1110,20 +1110,51 @@
 
       const name = document.getElementById('quote-name').value.trim();
       const phone = document.getElementById('quote-phone').value.trim();
+      const email = document.getElementById('quote-email').value.trim();
       const location = document.getElementById('quote-location').value.trim();
-      const projectType = document.querySelector('input[name="project_type"]:checked').value;
+      const projectTypeRadio = document.querySelector('input[name="project_type"]:checked');
+      const projectType = projectTypeRadio ? projectTypeRadio.value : 'General Building';
+      const plansStatus = document.getElementById('plans-status').value;
+      const timelineRadio = document.querySelector('input[name="timeline"]:checked');
+      const timeline = timelineRadio ? timelineRadio.value : 'Not specified';
+      const budget = document.getElementById('quote-budget').value;
+      const notes = document.getElementById('quote-notes').value.trim();
 
       if (!name || !phone) return;
+
+      const randomRef = 'JCH-' + Math.floor(1000 + Math.random() * 9000);
 
       document.getElementById('confirm-name').textContent = name;
       document.getElementById('confirm-type').textContent = projectType;
       document.getElementById('confirm-location').textContent = location || 'Norfolk';
-      
-      const randomRef = 'JCH-' + Math.floor(1000 + Math.random() * 9000);
       document.getElementById('quote-ref-code').textContent = '#' + randomRef;
+
+      // Construct mailto URL to open client's email program pre-filled for jcax632@gmail.com
+      const subject = `Quote Request [${randomRef}] - ${projectType} - ${name}`;
+      const body = `Quote Request Details:
+------------------------------------------
+Reference Code: #${randomRef}
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Location / Postcode: ${location}
+
+Service Required: ${projectType}
+Building Status: ${plansStatus}
+Timeline: ${timeline}
+Estimated Budget: ${budget}
+
+Summary / Notes:
+${notes || 'None provided'}
+------------------------------------------`;
+
+      const mailtoUrl = `mailto:jcax632@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       document.getElementById('quote-form').classList.add('hidden');
       document.getElementById('quote-success').classList.remove('hidden');
+
+      // Trigger client's mail application
+      window.location.href = mailtoUrl;
     }
 
     // Reset quote form
