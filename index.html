@@ -897,19 +897,10 @@
             </button>
           </div>
 
-          <!-- Active Photo Info Panel (Clean display beneath the preview image) -->
-          <div class="bg-estate-stone/90 border border-estate-gold/30 rounded-xl p-3.5 sm:p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div class="min-w-0 flex-1">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                <span id="gallery-active-badge" class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-estate-gold">Norfolk Flint & Brick Masonry</span>
-              </div>
-              <h3 id="gallery-active-title" class="font-serif text-base sm:text-lg font-bold text-estate-deep truncate">Terraced Garden Masonry & Steps</h3>
-              <p id="gallery-active-desc" class="text-xs text-slate-600 mt-0.5 line-clamp-2">Hand-laid Norfolk red brick coping, lime mortar bed, and knapped flint retaining wall construction.</p>
-            </div>
-            <div class="shrink-0 flex items-center justify-between sm:justify-end gap-3 pt-2 sm:pt-0 border-t sm:border-t-0 border-estate-sand">
-              <span id="gallery-counter" class="text-xs font-extrabold bg-estate-forest text-estate-gold px-3 py-1 rounded-full shadow-sm border border-estate-gold/30">1 / 29</span>
-            </div>
+          <!-- Active Photo Info Panel (Counter display beneath the preview image) -->
+          <div class="bg-estate-stone/90 border border-estate-gold/30 rounded-xl p-3 sm:p-3.5 shadow-sm flex items-center justify-between gap-3">
+            <span class="text-xs font-bold text-estate-deep">Project Showcase</span>
+            <span id="gallery-counter" class="text-xs font-extrabold bg-estate-forest text-estate-gold px-3 py-1 rounded-full shadow-sm border border-estate-gold/30">1 / 29</span>
           </div>
 
           <!-- Ticker Carousel Strip -->
@@ -1466,180 +1457,35 @@ ${notes || 'None provided'}
 
     // Dynamic Interactive Project Gallery Ticker Logic
     const galleryData = [
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42.jpeg",
-        badge: "Norfolk Flint & Brick Masonry",
-        title: "Terraced Garden Steps & Retaining Wall",
-        desc: "Hand-laid Norfolk red brick coping, lime mortar bed, and knapped flint retaining wall construction."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42 (1).jpeg",
-        badge: "Period Hearth Restoration",
-        title: "Exposed Brick Fireplace & Lime Mortar",
-        desc: "Restored historic fireplace opening with reclaimed imperial Norfolk bricks and traditional lime pointing."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43.jpeg",
-        badge: "Structural Brickwork",
-        title: "Garden Boundary Wall Restoration",
-        desc: "Precision brick laying and lime mortar jointing on classic Norfolk estate walling."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (1).jpeg",
-        badge: "Active Site Progress",
-        title: "Heritage Restoration in Progress",
-        desc: "Careful removal of degraded mortar prior to traditional NHL lime repointing."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (2).jpeg",
-        badge: "Traditional Masonry",
-        title: "Subbase Prep & Wall Construction",
-        desc: "Establishing solid footing and damp course for garden brickwork."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44.jpeg",
-        badge: "Lime Mortar Finishing",
-        title: "Hand-brushed Lime Jointing Detail",
-        desc: "Authentic, breathable lime finish matching existing historical masonry."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44 (1).jpeg",
-        badge: "Wall Restoration",
-        title: "Norfolk Cottage Wall Pointing",
-        desc: "Restoring wall stability and weather-proofing on centuries-old masonry."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.45.jpeg",
-        badge: "Flint & Brickwork",
-        title: "Terrace Construction Complete",
-        desc: "Seamless blending of reclaimed red brick header courses with flint fill."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.01.jpeg",
-        badge: "Brick Archway",
-        title: "Structural Brick Arch Restoration",
-        desc: "Hand-carved wooden centring arch used to rebuild structural brick opening."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02.jpeg",
-        badge: "Lime & Flint Infill",
-        title: "Knapped Flint & Mortar Bedding",
-        desc: "Traditional East Anglian flint knapping set in coarse NHL lime mortar."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (1).jpeg",
-        badge: "Site Works",
-        title: "Masonry Elevation Detail",
-        desc: "High quality detail on coursed brickwork and structural piers."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (2).jpeg",
-        badge: "Garden Features",
-        title: "Brick Step Riser & Paver Patio",
-        desc: "Custom step treads in handmade clay pavers and facing bricks."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (3).jpeg",
-        badge: "Flint & Lime Wall",
-        title: "Historic Flint Panel Repointing",
-        desc: "Restored field flint paneling in breathable lime mortar."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04.jpeg",
-        badge: "Roof & Chimney",
-        title: "Chimney Stack Repointing & Lead Flashings",
-        desc: "Weather-tight lime repointing and code 4 lead flashing repair."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (1).jpeg",
-        badge: "Estate Brickwork",
-        title: "Hand-picked Norfolk Brick Piering",
-        desc: "Constructed with traditional mortar joints to match original estate buildings."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (2).jpeg",
-        badge: "Groundworks & Foundations",
-        title: "Foundation & Subbase Preparation",
-        desc: "Excavation and subbase compaction for garden brick terracing."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (3).jpeg",
-        badge: "Red Brick Detailing",
-        title: "Parapet Wall & Coping Courses",
-        desc: "Precision brick capping to protect against frost and water ingress."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (4).jpeg",
-        badge: "Lime Mortar Work",
-        title: "Flush Lime Pointing Application",
-        desc: "Traditional flush joint finish protecting soft historic brickwork."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (5).jpeg",
-        badge: "Cottage Facade",
-        title: "Period Cottage Facade Restoration",
-        desc: "Restored exterior brickwork on period Norfolk home."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (6).jpeg",
-        badge: "Flint Retaining Wall",
-        title: "Flint & Brick Terrace Boundary",
-        desc: "Combination knapped flint walling with solid red brick quoins."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (7).jpeg",
-        badge: "Internal Brickwork",
-        title: "Bespoke Brick Chimney & Hearth",
-        desc: "Exposed brick fireplace surround crafted for woodburning stove installation."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05.jpeg",
-        badge: "Site Craftsmanship",
-        title: "Courtyard Brick Laying",
-        desc: "Laying reclaimed brick pavers in classic herringbone pattern."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (1).jpeg",
-        badge: "Patio & Steps",
-        title: "Finished Brick & Clay Tile Steps",
-        desc: "Cleaned and sealed garden steps with integrated side walls."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (2).jpeg",
-        badge: "Lime Pointing",
-        title: "Lime Mortar Curing & Finishing",
-        desc: "Controlled damp-curing process ensuring long-lasting lime bond."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (3).jpeg",
-        badge: "Garden Terrace",
-        title: "Completed Garden Terrace & Steps",
-        desc: "Fully restored garden level transition in red brick and flint."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (4).jpeg",
-        badge: "Brick Detailing",
-        title: "Soldier Course Brick Heading",
-        desc: "Decorative soldier course brickwork over garden walling."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (5).jpeg",
-        badge: "Cottage Chimney",
-        title: "Flue & Brick Stack Reconstruction",
-        desc: "Rebuilding dangerous chimney stack using matching local bricks."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (6).jpeg",
-        badge: "Brick Feature Arch",
-        title: "Reconstructed Brick Gateway Arch",
-        desc: "Structural garden archway built using traditional wooden former."
-      },
-      {
-        src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.06.jpeg",
-        badge: "Lime Pointing Complete",
-        title: "Fully Pointed Norfolk Brick Elevation",
-        desc: "Finished NHL lime mortar pointing offering breathability and heritage beauty."
-      }
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.42 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.43 (2).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.44 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 15.59.45.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.01.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (2).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.02 (3).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (2).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (3).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (4).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (5).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (6).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.04 (7).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05.jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (1).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (2).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (3).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (4).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (5).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.05 (6).jpeg" },
+      { src: "images/gallery/WhatsApp Image 2026-10-02 at 16.02.06.jpeg" }
     ];
 
     let activeGalleryIdx = 0;
@@ -1652,9 +1498,6 @@ ${notes || 'None provided'}
 
       const item = galleryData[index];
       const imgEl = document.getElementById('gallery-active-img');
-      const badgeEl = document.getElementById('gallery-active-badge');
-      const titleEl = document.getElementById('gallery-active-title');
-      const descEl = document.getElementById('gallery-active-desc');
       const counterEl = document.getElementById('gallery-counter');
 
       if (imgEl) {
@@ -1664,9 +1507,6 @@ ${notes || 'None provided'}
           imgEl.style.opacity = '1';
         }, 150);
       }
-      if (badgeEl) badgeEl.textContent = item.badge;
-      if (titleEl) titleEl.textContent = item.title;
-      if (descEl) descEl.textContent = item.desc;
       if (counterEl) counterEl.textContent = `${index + 1} / ${galleryData.length}`;
 
       // Highlight active thumbnail & scroll ticker track horizontally ONLY
@@ -1760,7 +1600,7 @@ ${notes || 'None provided'}
             <div class="w-full flex items-center justify-between mb-3 pb-3 border-b border-white/10 text-white">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-estate-gold animate-pulse"></span>
-                <span id="modal-badge" class="text-estate-gold text-xs font-bold uppercase tracking-wider"></span>
+                <span class="text-estate-gold text-xs font-bold uppercase tracking-wider">Project Photo</span>
               </div>
               <div class="flex items-center gap-2">
                 <span id="modal-counter" class="text-xs font-bold bg-white/10 text-estate-goldLight px-3 py-1 rounded-full border border-white/10"></span>
@@ -1777,17 +1617,11 @@ ${notes || 'None provided'}
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
               </button>
 
-              <img id="modal-img" src="" alt="" class="max-h-[60vh] sm:max-h-[70vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-white/10">
+              <img id="modal-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-white/10">
 
               <button onclick="modalNextImage(event)" class="absolute right-2 sm:right-4 z-10 bg-slate-950/70 hover:bg-estate-gold text-white hover:text-estate-deep p-2.5 sm:p-3 rounded-full border border-white/20 transition shadow-lg backdrop-blur-md" aria-label="Next image">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
               </button>
-            </div>
-
-            <!-- Glassmorphic Caption Card -->
-            <div class="mt-3 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-3.5 sm:p-4 text-center text-white">
-              <h4 id="modal-title" class="font-serif text-lg sm:text-2xl font-bold text-white"></h4>
-              <p id="modal-desc" class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl mx-auto leading-relaxed"></p>
             </div>
 
           </div>
@@ -1804,9 +1638,6 @@ ${notes || 'None provided'}
 
     function updateModalContent(item) {
       document.getElementById('modal-img').src = item.src;
-      document.getElementById('modal-badge').textContent = item.badge;
-      document.getElementById('modal-title').textContent = item.title;
-      document.getElementById('modal-desc').textContent = item.desc;
       document.getElementById('modal-counter').textContent = `${activeGalleryIdx + 1} / ${galleryData.length}`;
     }
 
